@@ -1,7 +1,32 @@
 TOOLS USED:
-
+System>Startup
+Inspector
 
 CODE USED:
+
+StartupPreferencesLoader default executeAtomicItems: {
+	StartupAction
+		name: 'Logo'
+		code: [ PolymorphSystemSettings showDesktopLogo: false] .
+StartupAction
+	name: 'Git Settings'
+	code: [
+		Iceberg enableMetacelloIntegration: true.
+		IceCredentialsProvider useCustomSsh: true.
+		IceCredentialsProvider sshCredentials
+				username: 'git';
+				publicKey: '/Users/ducasse/.ssh/id_rsa.pub';
+					privateKey: '/Users/ducasse/.ssh/id_rsa'.
+			IceCredentialStore current
+				storeCredential: (IcePlaintextCredentials new
+				username: 'ZZZ';
+				password: 'XXX';
+				host: 'github.com';
+				yourself).
+			 ].
+}.
+
+
 
 
 SCRIPT:
@@ -12,12 +37,34 @@ on startup.
 Every new Pharo image that you create will go through the execution of a setup
 file.
 
-This setup can be found here:
+You can edit the start up preferences of all your versions of Pharo or just a single one
+using the menu System>Startup
 
-PATH TO THE SETUP FILE
-
+- Create Files Icon
 
 And consists of a succession of StartupActions. Each startup action will have a
 name and a piece of code. The most useful ones are
 
-TO COMPLETE
+StartupPreferencesLoader default executeAtomicItems: {
+	StartupAction
+		name: 'Logo'
+		code: [ PolymorphSystemSettings showDesktopLogo: false] .
+StartupAction
+	name: 'Git Settings'
+	code: [
+		Iceberg enableMetacelloIntegration: true.
+		IceCredentialsProvider useCustomSsh: true.
+		IceCredentialsProvider sshCredentials
+				username: 'git';
+				publicKey: '/Users/ducasse/.ssh/id_rsa.pub';
+					privateKey: '/Users/ducasse/.ssh/id_rsa'.
+			IceCredentialStore current
+				storeCredential: (IcePlaintextCredentials new
+				username: 'ZZZ';
+				password: 'XXX';
+				host: 'github.com';
+				yourself).
+			 ].
+}.
+
+- Save
