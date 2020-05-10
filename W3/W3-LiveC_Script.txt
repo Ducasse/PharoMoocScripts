@@ -14,3 +14,5 @@ Now if we write Point again, the Spotter will show us the History of searches
 as well as other classes that have the "Point" in their name.
 
 This allows you to access the last visited class extremely quickly.
+
+Add an example with #implementor / #sender 

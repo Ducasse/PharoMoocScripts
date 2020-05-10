@@ -207,8 +207,8 @@ e) W3-Redo-DSL
 		Conclusion scenario:
 			Split it into three videos
 				- die up to the tests 10 min
-					- diecehandle	10 min
-					- Split the extensions 10 min
+				- diecehandle	10 min
+				- Split the extensions 10 min
 
 	Status: English and French
 
@@ -335,7 +335,6 @@ c)Live Diffing and Merging in Pharo
 
 
 d)Live GTInspector 4: Build Custom Tab Views for your Objects
-	A jeter probablement.
 
 	Keep it as it is
 
